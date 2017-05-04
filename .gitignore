@@ -1,0 +1,6 @@
+# blacklist everything
+*
+# now whitelist
+!.gitignore
+!crane.yml
+
