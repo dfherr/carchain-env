@@ -1,2 +1,10 @@
 services:
+  parity:
+    image: ethcore/parity:stable
+    net: dev
+    publish: ["8080:8080", "8545:8545"]
+    tty: true
+    interactive: true
 
+networks:
+  dev:    
