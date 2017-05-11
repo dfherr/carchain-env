@@ -2,7 +2,7 @@ To use this project environment you need to install docker and crane.
 
 `https://docs.docker.com/engine/installation/#supported-platforms`
 
-For ubuntu go directly to: `https://docs.docker.com/engine/installation/linux/ubuntu/`
+For ubuntu you can go directly to: `https://docs.docker.com/engine/installation/linux/ubuntu/`
 
 Also follow the post install steps for the docker user and auto start of docker `https://docs.docker.com/engine/installation/linux/linux-postinstall/`
 
