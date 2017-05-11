@@ -1,10 +1,10 @@
 services:
   parity:
     image: ethcore/parity:stable
-    net: dev
-    publish: ["8080:8080", "8545:8545"]
+    publish: ["8080:8080", "8545:8545", "8180:8180", "30303:30303"]
     tty: true
     interactive: true
+    command: "--chain=ropsten --dapps-hosts=all --dapps-interface=0.0.0.0 --ui-interface=0.0.0.0"
 
 networks:
-  dev:    
+  dev:
