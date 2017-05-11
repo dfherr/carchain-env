@@ -3,4 +3,6 @@
 # now whitelist
 !.gitignore
 !crane.yml
-
+!parity/
+parity/*
+!parity/config.toml
