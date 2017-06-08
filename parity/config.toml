@@ -1,5 +1,4 @@
 [parity]
-base_path = "/mnt"
 chain = "ropsten"
 
 [network]
@@ -16,6 +15,7 @@ disable = false
 port = 8545
 interface = "0.0.0.0"
 hosts = ["all"]
+apis = ["web3", "eth", "net", "personal", "parity", "parity_accounts", "parity_set", "signer", "trace", "rpc"]
 
 [dapps]
 disable = false

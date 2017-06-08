@@ -7,8 +7,7 @@ services:
     tty: true
     rm: true
     interactive: true
-    volume: ["parity:/mnt"]
-    command: "--config=/mnt/config.toml"
+    volume: ["parity:/root/.local/share/io.parity.ethereum/"]
 
 networks:
   dev:
