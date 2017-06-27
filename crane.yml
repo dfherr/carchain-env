@@ -1,13 +1,54 @@
 services:
   parity:
-    image: ethcore/parity:stable
-    hostname: parity
+    image: "ethcore/parity:stable"
+    hostname: "parity"
     net: "dev"
-    publish: ["8080:8080", "8545:8545", "8180:8180", "30303:30303"]
     tty: true
-    rm: true
-    interactive: true
+    detach: true
+    #rm: true
+    #interactive: true
     volume: ["parity:/root/.local/share/io.parity.ethereum/"]
+    publish: ["8080:8080", "8545:8545", "8180:8180", "30303:30303"]
+  carchain:
+    image: "dfherr/carchain:latest"
+    requires:
+      - "postgres-carchain"
+    #  - "parity"
+    hostname: "carchain"
+    net: "dev"
+    tty: true
+    interactive: true
+    env:
+      - "RAILS_ENV=development"
+      - "RAILS_LOG_TO_STDOUT=true"
+      - "CARCHAIN_DATABASE_HOST=blc-psi-env_postgres-carchain.blc-psi-env_dev"
+    volume: ["carchain:/carchain"]
+    publish: ["3000:3000"]
+    run:
+      rm: true
+  carchain-precommit:
+    image: "dfherr/carchain:latest"
+    requires:
+      - "postgres-carchain"
+    hostname: "carchain"
+    net: "dev"
+    tty: true
+    env:
+      - "RAILS_ENV=development"
+      - "RAILS_LOG_TO_STDOUT=true"
+      - "CARCHAIN_DATABASE_HOST=blc-psi-env_postgres-carchain.blc-psi-env_dev"
+    run:
+      rm: true
+  postgres-carchain:
+    image: "dfherr/postgres:9.6.3"
+    hostname: "postgres-carchain"
+    net: "dev"
+    tty: true
+    volume: ["$HOME/.psqlrc:/home/postgres/.psqlrc", "$HOME/.psql_history:/home/postgres/.psql_history"]
+    run:
+      detach: true
+    exec:
+      interactive: true
 
 networks:
   dev:

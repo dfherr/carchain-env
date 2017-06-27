@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$#" -eq 0 ]; then
+  crane run carchain
+else
+  crane run carchain sh -c "$*"
+fi
