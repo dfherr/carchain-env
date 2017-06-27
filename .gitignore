@@ -1,8 +1,9 @@
-# blacklist everything
-*
+# blacklist every subdir
+/*
 # now whitelist
 !.gitignore
 !crane.yml
+!bin/
 !parity/
 parity/*
 !parity/config.toml
