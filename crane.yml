@@ -1,6 +1,6 @@
 services:
   parity:
-    image: "ethcore/parity:stable"
+    image: "parity/parity:v1.6.8"
     hostname: "parity"
     net: "dev"
     tty: true
@@ -13,7 +13,7 @@ services:
     image: "dfherr/carchain:latest"
     requires:
       - "postgres-carchain"
-    #  - "parity"
+    # - "parity"
     hostname: "carchain"
     net: "dev"
     tty: true
