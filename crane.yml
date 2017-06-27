@@ -44,7 +44,7 @@ services:
     hostname: "postgres-carchain"
     net: "dev"
     tty: true
-    volume: ["$HOME/.psqlrc:/home/postgres/.psqlrc", "$HOME/.psql_history:/home/postgres/.psql_history"]
+    volume: ["pg-data-carchain:/postgres/data", "$HOME/.psqlrc:/home/postgres/.psqlrc", "$HOME/.psql_history:/home/postgres/.psql_history"]
     run:
       detach: true
     exec:
