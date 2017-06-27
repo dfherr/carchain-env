@@ -4,9 +4,9 @@ services:
     hostname: "parity"
     net: "dev"
     tty: true
-    detach: true
-    #rm: true
-    #interactive: true
+    #detach: true
+    rm: true
+    interactive: true
     volume: ["parity:/root/.local/share/io.parity.ethereum/"]
     publish: ["8080:8080", "8545:8545", "8180:8180", "30303:30303"]
   carchain:
