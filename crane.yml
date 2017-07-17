@@ -21,6 +21,16 @@ services:
     interactive: true
     volume: ["parity-node2:/root/.local/share/io.parity.ethereum/", "parity/carchain-chainspec.json:/root/.local/share/io.parity.ethereum/carchain-chainspec.json"]
     publish: ["8081:8081", "8546:8546", "8181:8181"]
+  parity-dev:
+    image: "parity/parity:v1.6.9"
+    hostname: "parity"
+    net: "dev"
+    tty: true
+    #detach: true
+    rm: true
+    interactive: true
+    volume: ["parity-dev:/root/.local/share/io.parity.ethereum/"]
+    publish: ["8080:8080", "8545:8545", "8180:8180"]
   carchain:
     image: "dfherr/carchain:latest"
     requires:
