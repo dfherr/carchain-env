@@ -3,7 +3,6 @@ chain = "/root/.local/share/io.parity.ethereum/carchain-chainspec.json"
 
 [network]
 warp = true
-bootnodes = ["enode://d6c2c1d88e779c8c035cf024ffa427947504d2e8fbf474ffde8525bea73e9a1ef880f0ae26b755ca11df59002b9cf87647350b15985d69a79c48955750634614@172.19.0.3:30303"]
 
 [ui]
 force = false
