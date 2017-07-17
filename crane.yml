@@ -6,7 +6,7 @@ services:
     hostname: "parity"
     net: "dev"
     tty: true
-    #detach: true
+    detach: true
     rm: true
     interactive: true
     volume: ["parity:/root/.local/share/io.parity.ethereum/"]
@@ -25,7 +25,7 @@ services:
     image: "dfherr/carchain:latest"
     requires:
       - "postgres-carchain"
-    # - "parity"
+      - "parity"
     hostname: "carchain"
     net: "dev"
     tty: true
