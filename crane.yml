@@ -6,7 +6,7 @@ services:
       - "parity-node2"
     hostname: "parity-node0"
     net: "dev"
-    ip: "172.19.0.10"
+    ip: "172.28.0.10"
     tty: true
     detach: true
     rm: true
@@ -27,7 +27,7 @@ services:
     image: "parity/parity:v1.6.9"
     hostname: "parity-node1"
     net: "dev"
-    ip: "172.19.0.11"
+    ip: "172.28.0.11"
     tty: true
     detach: true
     rm: true
@@ -47,7 +47,7 @@ services:
     image: "parity/parity:v1.6.9"
     hostname: "parity-node1"
     net: "dev"
-    ip: "172.19.0.12"
+    ip: "172.28.0.12"
     tty: true
     detach: true
     rm: true
@@ -114,6 +114,3 @@ services:
       detach: true
     exec:
       interactive: true
-
-networks:
-  dev:

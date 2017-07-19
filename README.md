@@ -22,13 +22,17 @@ Then inside this repository clone the [Carchain](https://github.com/blc-psi/carc
 
 Optionally add `blc-psi-env/bin` to your path, for shortened startup commands.
 
+You need to manually add the dev network (for now):
+
+`docker network create --subnet=172.28.0.0/16 --gateway=172.28.0.1 dev`
+
 # Usage
 
 Working with the project is easy. While inside the `blc-psi-env` folder, simply use `crane run carchain` or simply `carchain` if you added the bin to your path.
 
 If you need to run special tasks, such as rake, simply append them: `crane run carchain bundle exec rake -T`
 
-Your local projecct and the code used in the docker container are mirroed for development, so you can immediately see your changes without rebuilding the image or even restarting the docker container.
+Your local project and the code used in the docker container are mirroed for development, so you can immediately see your changes without rebuilding the image or even restarting the docker container.
 
 
 
