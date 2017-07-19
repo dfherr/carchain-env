@@ -2,25 +2,67 @@ services:
   parity:
     image: "parity/parity:v1.6.9"
     requires:
+      - "parity-node1"
       - "parity-node2"
-    hostname: "parity"
+    hostname: "parity-node0"
     net: "dev"
+    ip: "172.19.0.10"
+    tty: true
+    #detach: true
+    rm: true
+    interactive: true
+    volume:
+      - "parity-node0/chains:/root/.local/share/io.parity.ethereum/chains"
+      - "parity-node0/keys:/root/.local/share/io.parity.ethereum/keys"
+      - "parity-node0/network:/root/.local/share/io.parity.ethereum/network"
+      - "parity-node0/signer:/root/.local/share/io.parity.ethereum/signer"
+      - "setup-parity/carchain-chainspec.json:/root/.local/share/io.parity.ethereum/carchain-chainspec.json:ro"
+      - "setup-parity/node0/config.toml:/root/.local/share/io.parity.ethereum/config.toml:ro"
+      - "setup-parity/node0/keys/authority0.json:/root/.local/share/io.parity.ethereum/keys/carchain/authority0.json:ro"
+      - "setup-parity/node0/keys/member0.json:/root/.local/share/io.parity.ethereum/keys/carchain/user0.json:ro"
+      - "setup-parity/node0/authority0.pwds:/root/.local/share/io.parity.ethereum/authority0.pwds:ro"
+      - "setup-parity/node0/node0_network_key:/root/.local/share/io.parity.ethereum/network/key:ro"
+    publish: ["8080:8080", "8180:8180", "8545:8545"]
+  parity-node1:
+    image: "parity/parity:v1.6.9"
+    hostname: "parity-node1"
+    net: "dev"
+    ip: "172.19.0.11"
     tty: true
     detach: true
     rm: true
     interactive: true
-    volume: ["parity:/root/.local/share/io.parity.ethereum/"]
-    publish: ["8080:8080", "8545:8545", "8180:8180", "30303:30303"]
+    volume:
+      - "parity-node1/chains:/root/.local/share/io.parity.ethereum/chains"
+      - "parity-node1/keys:/root/.local/share/io.parity.ethereum/keys"
+      - "parity-node1/network:/root/.local/share/io.parity.ethereum/network"
+      - "parity-node1/signer:/root/.local/share/io.parity.ethereum/signer"
+      - "setup-parity/carchain-chainspec.json:/root/.local/share/io.parity.ethereum/carchain-chainspec.json:ro"
+      - "setup-parity/node1/config.toml:/root/.local/share/io.parity.ethereum/config.toml:ro"
+      - "setup-parity/node1/keys/authority1.json:/root/.local/share/io.parity.ethereum/keys/carchain/authority1.json:ro"
+      - "setup-parity/node1/authority1.pwds:/root/.local/share/io.parity.ethereum/authority1.pwds:ro"
+      - "setup-parity/node1/node1_network_key:/root/.local/share/io.parity.ethereum/network/key:ro"
+    publish: ["8081:8081", "8546:8546", "8181:8181"]
   parity-node2:
     image: "parity/parity:v1.6.9"
-    hostname: "parity-node2"
+    hostname: "parity-node1"
     net: "dev"
+    ip: "172.19.0.12"
     tty: true
     detach: true
     rm: true
     interactive: true
-    volume: ["parity-node2:/root/.local/share/io.parity.ethereum/", "parity/carchain-chainspec.json:/root/.local/share/io.parity.ethereum/carchain-chainspec.json"]
-    publish: ["8081:8081", "8546:8546", "8181:8181"]
+    volume:
+      - "parity-node2/chains:/root/.local/share/io.parity.ethereum/chains"
+      - "parity-node2/keys:/root/.local/share/io.parity.ethereum/keys"
+      - "parity-node2/network:/root/.local/share/io.parity.ethereum/network"
+      - "parity-node2/signer:/root/.local/share/io.parity.ethereum/signer"
+      - "setup-parity/carchain-chainspec.json:/root/.local/share/io.parity.ethereum/carchain-chainspec.json:ro"
+      - "setup-parity/node2/config.toml:/root/.local/share/io.parity.ethereum/config.toml:ro"
+      - "setup-parity/node2/keys/authority2.json:/root/.local/share/io.parity.ethereum/keys/carchain/authority2.json:ro"
+      - "setup-parity/node2/authority2.pwds:/root/.local/share/io.parity.ethereum/authority2.pwds:ro"
+      - "setup-parity/node2/node2_network_key:/root/.local/share/io.parity.ethereum/network/key:ro"
+    publish: ["8082:8082", "8547:8547", "8182:8182"]
   parity-dev:
     image: "parity/parity:v1.6.9"
     hostname: "parity"

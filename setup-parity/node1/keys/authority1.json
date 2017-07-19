@@ -1,0 +1,22 @@
+{
+  "id": "15a341fc-0e17-ece6-a85b-eef6e5a16bde",
+  "version": 3,
+  "crypto": {
+    "cipher": "aes-128-ctr",
+    "cipherparams": {
+      "iv": "fd5853a575245a77062bdd5e54a54d82"
+    },
+    "ciphertext": "2d243fd8c9c73f38e6c833f4b3a80f368a0a2422be4952d3dbf1b9b49f5e115e",
+    "kdf": "pbkdf2",
+    "kdfparams": {
+      "c": 10240,
+      "dklen": 32,
+      "prf": "hmac-sha256",
+      "salt": "bc6f112e42bc73f586d9cb0ec9de6f2f7e1321eb0e6fe05f0e2344535bfa2f6c"
+    },
+    "mac": "b83667fa65b9525bf7c184d056ea492b72bd1bd94823b90c35545f622cdbda1e"
+  },
+  "address": "0068fe30508c9606a754bb5aa561a9ec6c283695",
+  "name": "authority1",
+  "meta": "{}"
+}

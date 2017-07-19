@@ -4,6 +4,4 @@
 !.gitignore
 !crane.yml
 !bin/
-!parity/
-parity/*
-!parity/config.toml
+!setup-parity/
