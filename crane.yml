@@ -19,7 +19,7 @@ services:
       - "setup-parity/carchain-chainspec.json:/root/.local/share/io.parity.ethereum/carchain-chainspec.json:ro"
       - "setup-parity/node0/config.toml:/root/.local/share/io.parity.ethereum/config.toml:ro"
       - "setup-parity/node0/keys/authority0.json:/root/.local/share/io.parity.ethereum/keys/carchain/authority0.json:ro"
-      - "setup-parity/node0/keys/member0.json:/root/.local/share/io.parity.ethereum/keys/carchain/user0.json:ro"
+      - "setup-parity/node0/keys/user0.json:/root/.local/share/io.parity.ethereum/keys/carchain/user0.json:ro"
       - "setup-parity/node0/authority0.pwds:/root/.local/share/io.parity.ethereum/authority0.pwds:ro"
       - "setup-parity/node0/node0_network_key:/root/.local/share/io.parity.ethereum/network/key:ro"
     publish: ["8080:8080", "8180:8180", "8545:8545"]

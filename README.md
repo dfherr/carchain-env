@@ -45,3 +45,12 @@ Add the "result" to node 1 (replace enode://RESULT in the command):
 ```
 curl --data '{"jsonrpc":"2.0","method":"parity_addReservedPeer","params":["enode://RESULT"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8546
 ```
+
+
+If you're asked for a signer token in parity web ui use:
+
+```
+curl --data '{"method":"signer_generateAuthorizationToken","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8545
+```
+
+Adjust the port according to the node (`node0 8545`, `node1 8546`, `node2 8547`)

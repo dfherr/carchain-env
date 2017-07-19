@@ -33,5 +33,5 @@ password = ["/root/.local/share/io.parity.ethereum/authority2.pwds"]
 [mining]
 engine_signer = "00ad8909bc91ed16e1ede42c6b2e3f5801701e05"
 reseal_on_txs = "none"
-force_sealing = true
+#force_sealing = true
 usd_per_tx = "0"
