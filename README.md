@@ -32,20 +32,7 @@ Your local projecct and the code used in the docker container are mirroed for de
 
 
 
-## Connect nodes:
-
-Run:
-
-```
-curl --data '{"jsonrpc":"2.0","method":"parity_enode","params":[],"id":0}' -H "Content-Type: application/json" -X POST localhost:8545
-```
-
-Add the "result" to node 1 (replace enode://RESULT in the command):
-
-```
-curl --data '{"jsonrpc":"2.0","method":"parity_addReservedPeer","params":["enode://RESULT"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8546
-```
-
+## Comments:
 
 If you're asked for a signer token in parity web ui use:
 

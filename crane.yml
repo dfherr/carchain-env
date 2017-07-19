@@ -8,7 +8,7 @@ services:
     net: "dev"
     ip: "172.19.0.10"
     tty: true
-    #detach: true
+    detach: true
     rm: true
     interactive: true
     volume:
