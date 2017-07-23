@@ -20,7 +20,7 @@ First clone this repository.
 
 Then inside this repository clone the [Carchain](https://github.com/blc-psi/carchain) project. (Do not change the name. The subfolder should be named carchain)
 
-Optionally add `blc-psi-env/bin` to your path, for shortened startup commands.
+Optionally add `carchain-env/bin` to your path, for shortened startup commands.
 
 You need to manually add the dev network (for now):
 
@@ -28,7 +28,7 @@ You need to manually add the dev network (for now):
 
 # Usage
 
-Working with the project is easy. While inside the `blc-psi-env` folder, simply use `crane run carchain` or simply `carchain` if you added the bin to your path.
+Working with the project is easy. While inside the `carchain-env` folder, simply use `crane run carchain` or simply `carchain` if you added the bin to your path.
 
 If you need to run special tasks, such as rake, simply append them: `crane run carchain bundle exec rake -T`
 
@@ -45,3 +45,9 @@ curl --data '{"method":"signer_generateAuthorizationToken","params":[],"id":1,"j
 ```
 
 Adjust the port according to the node (`node0 8545`, `node1 8546`, `node2 8547`)
+
+## License
+
+[MIT](https://github.com/blc-psi/carchain-env/blob/master/LICENSE)
+
+Copyright (c) 2017 Dennis-Florian Herr
