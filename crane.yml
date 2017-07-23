@@ -85,7 +85,7 @@ services:
     env:
       - "RAILS_ENV=development"
       - "RAILS_LOG_TO_STDOUT=true"
-      - "CARCHAIN_DATABASE_HOST=blc-psi-env_postgres-carchain.dev"
+      - "CARCHAIN_DATABASE_HOST=carchain-env_postgres-carchain.dev"
     volume: ["carchain:/carchain"]
     publish: ["3000:3000"]
     run:
@@ -100,7 +100,7 @@ services:
     env:
       - "RAILS_ENV=development"
       - "RAILS_LOG_TO_STDOUT=true"
-      - "CARCHAIN_DATABASE_HOST=blc-psi-env_postgres-carchain.dev"
+      - "CARCHAIN_DATABASE_HOST=carchain-env_postgres-carchain.dev"
     volume: ["carchain:/carchain"]
     run:
       rm: true
