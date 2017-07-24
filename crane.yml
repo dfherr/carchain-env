@@ -20,6 +20,7 @@ services:
       - "setup-parity/node0/config.toml:/root/.local/share/io.parity.ethereum/config.toml:ro"
       - "setup-parity/node0/keys/authority0.json:/root/.local/share/io.parity.ethereum/keys/carchain/authority0.json:ro"
       - "setup-parity/node0/keys/user0.json:/root/.local/share/io.parity.ethereum/keys/carchain/user0.json:ro"
+      - "setup-parity/shared_keys/deployment.json:/root/.local/share/io.parity.ethereum/keys/carchain/deployment.json:ro"
       - "setup-parity/node0/authority0.pwds:/root/.local/share/io.parity.ethereum/authority0.pwds:ro"
       - "setup-parity/node0/node0_network_key:/root/.local/share/io.parity.ethereum/network/key:ro"
     publish: ["8080:8080", "8180:8180", "8545:8545"]
@@ -40,6 +41,7 @@ services:
       - "setup-parity/carchain-chainspec.json:/root/.local/share/io.parity.ethereum/carchain-chainspec.json:ro"
       - "setup-parity/node1/config.toml:/root/.local/share/io.parity.ethereum/config.toml:ro"
       - "setup-parity/node1/keys/authority1.json:/root/.local/share/io.parity.ethereum/keys/carchain/authority1.json:ro"
+      - "setup-parity/shared_keys/deployment.json:/root/.local/share/io.parity.ethereum/keys/carchain/deployment.json:ro"
       - "setup-parity/node1/authority1.pwds:/root/.local/share/io.parity.ethereum/authority1.pwds:ro"
       - "setup-parity/node1/node1_network_key:/root/.local/share/io.parity.ethereum/network/key:ro"
     publish: ["8081:8081", "8546:8546", "8181:8181"]
@@ -60,6 +62,7 @@ services:
       - "setup-parity/carchain-chainspec.json:/root/.local/share/io.parity.ethereum/carchain-chainspec.json:ro"
       - "setup-parity/node2/config.toml:/root/.local/share/io.parity.ethereum/config.toml:ro"
       - "setup-parity/node2/keys/authority2.json:/root/.local/share/io.parity.ethereum/keys/carchain/authority2.json:ro"
+      - "setup-parity/shared_keys/deployment.json:/root/.local/share/io.parity.ethereum/keys/carchain/deployment.json:ro"
       - "setup-parity/node2/authority2.pwds:/root/.local/share/io.parity.ethereum/authority2.pwds:ro"
       - "setup-parity/node2/node2_network_key:/root/.local/share/io.parity.ethereum/network/key:ro"
     publish: ["8082:8082", "8547:8547", "8182:8182"]
