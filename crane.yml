@@ -4,7 +4,7 @@ services:
     requires:
       - "parity-node1"
       - "parity-node2"
-    hostname: "parity-node0"
+    hostname: "parity"
     net: "dev"
     ip: "172.28.0.10"
     tty: true
@@ -86,6 +86,7 @@ services:
       - "RAILS_ENV=development"
       - "RAILS_LOG_TO_STDOUT=true"
       - "CARCHAIN_DATABASE_HOST=carchain-env_postgres-carchain.dev"
+      - "PARITY_JSON_RPC_URL=http://carchain-env_parity.dev:8545"
     volume: ["carchain:/carchain"]
     publish: ["3000:3000"]
     run:
