@@ -34,7 +34,15 @@ If you need to run special tasks, such as rake, simply append them: `crane run c
 
 Your local project and the code used in the docker container are mirroed for development, so you can immediately see your changes without rebuilding the image or even restarting the docker container.
 
+### Cleanup
 
+To force a full update run:
+
+`git pull && crane rm --force carchain && crane rm --force parity && crane rm --force parity-node1 && crane rm --force parity-node2 && crane pull`
+
+From time to time you may want to delete old unused images:
+
+`docker rm $(docker ps -a -q)`
 
 ## Comments:
 
