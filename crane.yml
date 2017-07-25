@@ -1,6 +1,6 @@
 services:
   parity:
-    image: "parity/parity:v1.6.10"
+    image: "parity/parity:v1.6.9"
     requires:
       - "parity-node1"
       - "parity-node2"
@@ -25,7 +25,7 @@ services:
       - "setup-parity/node0/node0_network_key:/root/.local/share/io.parity.ethereum/network/key:ro"
     publish: ["8080:8080", "8180:8180", "8545:8545"]
   parity-node1:
-    image: "parity/parity:v1.6.10"
+    image: "parity/parity:v1.6.9"
     hostname: "parity-node1"
     net: "dev"
     ip: "172.28.0.11"
@@ -46,7 +46,7 @@ services:
       - "setup-parity/node1/node1_network_key:/root/.local/share/io.parity.ethereum/network/key:ro"
     publish: ["8081:8081", "8546:8546", "8181:8181"]
   parity-node2:
-    image: "parity/parity:v1.6.10"
+    image: "parity/parity:v1.6.9"
     hostname: "parity-node1"
     net: "dev"
     ip: "172.28.0.12"
@@ -67,7 +67,7 @@ services:
       - "setup-parity/node2/node2_network_key:/root/.local/share/io.parity.ethereum/network/key:ro"
     publish: ["8082:8082", "8547:8547", "8182:8182"]
   parity-dev:
-    image: "parity/parity:v1.6.10"
+    image: "parity/parity:v1.6.9"
     hostname: "parity"
     net: "dev"
     tty: true
