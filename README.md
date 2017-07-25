@@ -42,7 +42,7 @@ To force a full update run:
 
 From time to time you may want to delete old unused images:
 
-`docker rm $(docker ps -a -q)`
+`docker rm $(docker ps -a -q) && docker images -q | xargs docker rmi`
 
 ## Comments:
 
