@@ -102,6 +102,7 @@ services:
     hostname: "carchain"
     net: "dev"
     tty: true
+    interactive: true
     detach: true
     env:
       - "RAILS_ENV=production"
