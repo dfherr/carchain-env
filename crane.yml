@@ -105,6 +105,7 @@ services:
     detach: true
     env:
       - "RAILS_ENV=production"
+      - "SECRET_KEY_BASE=6b747f3f2db8daaeb8c8a8bb6608deeb56141adf53ed75ac157ac003e0b35ce191afeeb8764758baa56c1a9ea0ff78add8bb580a4620d924e12964d3cf1b469c"
       - "SES_SMTP_ADDRESS=email-smtp.eu-west-1.amazonaws.com"
       - "SES_SMTP_USERNAME=${SES_SMTP_USERNAME}"
       - "SES_SMTP_PASSWORD=${SES_SMTP_PASSWORD}"
