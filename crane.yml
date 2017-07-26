@@ -24,7 +24,6 @@ services:
       - "setup-parity/node0/authority0.pwds:/root/.local/share/io.parity.ethereum/authority0.pwds:ro"
       - "setup-parity/node0/node0_network_key:/root/.local/share/io.parity.ethereum/network/key:ro"
     publish: ["8080:8080", "8180:8180", "8545:8545"]
-    command: ["--ui-no-validation"]
   parity-node1:
     image: "parity/parity:v1.6.9"
     hostname: "parity-node1"
