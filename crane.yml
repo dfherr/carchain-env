@@ -110,6 +110,7 @@ services:
       - "SES_SMTP_USERNAME=${SES_SMTP_USERNAME}"
       - "SES_SMTP_PASSWORD=${SES_SMTP_PASSWORD}"
       - "RAILS_LOG_TO_STDOUT=true"
+      - "LOG_LEVEL=info"
       - "CARCHAIN_DATABASE_HOST=carchain-env_postgres-carchain.dev"
       - "PARITY_JSON_RPC_URL=http://carchain-env_parity.dev:8545"
     publish: ["80:3000"]
