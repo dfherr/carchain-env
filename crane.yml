@@ -80,7 +80,6 @@ services:
       - "RAILS_LOG_TO_STDOUT=true"
       - "CARCHAIN_DATABASE_HOST=carchain-env_postgres-carchain.dev"
       - "PARITY_JSON_RPC_URL=http://carchain-env_parity.dev:8545"
-    volume: ["carchain:/carchain"]
     publish: ["80:3000"]
     run:
       rm: true
