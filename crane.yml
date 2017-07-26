@@ -74,9 +74,11 @@ services:
     hostname: "carchain"
     net: "dev"
     tty: true
+    detach: true
     interactive: true
     env:
-      - "RAILS_ENV=development"
+      - "RAILS_ENV=production"
+      - "SES_SMTP_ADDRESS=email-smtp.eu-west-1.amazonaws.com"
       - "RAILS_LOG_TO_STDOUT=true"
       - "CARCHAIN_DATABASE_HOST=carchain-env_postgres-carchain.dev"
       - "PARITY_JSON_RPC_URL=http://carchain-env_parity.dev:8545"
