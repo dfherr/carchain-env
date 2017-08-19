@@ -1,3 +1,4 @@
+prefix: true
 services:
   parity:
     image: "parity/parity:v1.6.9"
