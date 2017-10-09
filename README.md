@@ -18,7 +18,7 @@ Then install crane `https://www.craneup.tech/docs#installation`
 
 First clone this repository.
 
-Then inside this repository clone the [Carchain](https://github.com/blc-psi/carchain) project. (Do not change the name. The subfolder should be named carchain)
+Then inside this repository clone the [Carchain](https://github.com/dfherr/carchain) project. (Do not change the name. The subfolder should be named carchain)
 
 Optionally add `carchain-env/bin` to your path, for shortened startup commands.
 
